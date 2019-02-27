@@ -213,19 +213,19 @@ let parseSomething() =
 [<EntryPoint>]
 let main argv =
     // run all tests tagged with [<TESTS>] - can be in any file
-    runTestsInAssembly expectoConfig [||] |> ignore // run all tests defined with [<Tests>]
+    //runTestsInAssembly expectoConfig [||] |> ignore // run all tests defined with [<Tests>]
     // print samples from the custom tokenise input generator
     // NB to get the input string concatenate the list of strings with empty separator
-    //printGenSamples "alpha" Gen.alphaGen
-    //printGenSamples "regName" Gen.regNameGen
-    //printGenSamples "manyAlphaNum" Gen.manyAlphaNumGen
-    //printGenSamples "id" Gen.idGen
-    //printArbSamples "tokStringArb" Gen.tokStringArb
-    //printGenSamples "tokListGen" Gen.tokListGen
-    // run the tokeniser, printing the result
+    printGenSamples "alpha" Gen.alphaGen
+    printGenSamples "regName" Gen.regNameGen
+    printGenSamples "manyAlphaNum" Gen.manyAlphaNumGen
+    printGenSamples "id" Gen.idGen
+    printArbSamples "tokStringArb" Gen.tokStringArb
+    printGenSamples "tokListGen" Gen.tokListGen
+    run the tokeniser, printing the result
     //tokeniseSomething()
     // run the parser, printing the result
-    //parseSomething()
+    parseSomething()
     // keep command window open
     printfn "press any key to terminate"
     Console.ReadKey() |> ignore
