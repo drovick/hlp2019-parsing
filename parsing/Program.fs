@@ -222,7 +222,7 @@ let main argv =
     printGenSamples "id" Gen.idGen
     printArbSamples "tokStringArb" Gen.tokStringArb
     printGenSamples "tokListGen" Gen.tokListGen
-    run the tokeniser, printing the result
+    //run the tokeniser, printing the result
     //tokeniseSomething()
     // run the parser, printing the result
     parseSomething()
